@@ -1,6 +1,6 @@
-# 🚀 Site Marketing App Deployment (Azure + Terraform)
+# Site Marketing App Deployment (Azure + Terraform)
 
-## 📌 Overview
+## Overview
 This project deploys a containerized application to Azure using Terraform, Docker, and Azure Container Apps.
 
 The solution follows a two-phase deployment approach to ensure reliable provisioning and avoid dependency issues between infrastructure and application layers.
