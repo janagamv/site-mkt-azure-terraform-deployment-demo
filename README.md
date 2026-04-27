@@ -6,13 +6,11 @@ This project deploys a containerized application to Azure using Terraform, Docke
 The solution follows a two-phase deployment approach to ensure reliable provisioning and avoid dependency issues between infrastructure and application layers.
 
 ---
-
 ##  Prerequisites
 - Azure account
 - Azure CLI
 - Terraform >= 1.6
 - Docker
-
 ---
 
 ##  Authentication
