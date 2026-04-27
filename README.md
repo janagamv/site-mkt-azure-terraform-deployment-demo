@@ -84,11 +84,20 @@ terraform apply phase2tfplan
 terraform output site_url
 ```
 
-## Scaling
-Min replicas: 1 (for demo reliability)
-Max replicas: 2
-HTTP scaling enabled automatically via ingress
+## ⚡ Scaling
 
+- **Min replicas: 0**  
+  Enables scale-to-zero for cost optimization when there is no traffic.
+
+- **Max replicas: 2**  
+  Limits the maximum number of instances during traffic spikes.
+
+- **HTTP-based autoscaling**  
+  Scaling is automatically triggered based on incoming HTTP requests via ingress.
+
+- **Demo consideration**  
+  For demonstration purposes, `min_replicas` can be temporarily set to `1` to ensure the application is always accessible without cold-start delay.
+```
 ---
 
 ---
