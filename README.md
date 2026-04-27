@@ -27,7 +27,8 @@ $env:ARM_SUBSCRIPTION_ID=""
 ---
 ## Deployment Instructions
 ### 1. Clone repo
-git clone "https://github.com/janagamv/site-mkt-azure-terraform-deployment-demo.git"  or "git@github.com:janagamv/site-mkt-azure-terraform-deployment-demo.git"
+
+git clone "https://github.com/janagamv/site-mkt-azure-terraform-deployment-demo.git"
 
 ### 2. Phase 1 – Deploy Infrastructure
 
@@ -42,20 +43,23 @@ Add and Update required values:
 > Note: Keep `deploy_application = false` for Phase 1 (infrastructure only)
 
 #### Run Terraform to deploy the3 changes
+```
 terraform init
 terraform plan -out=phase1tfplan
 terraform apply phase1tfplan
 
+```
 ### 3. Build & Push Docker Images
 Note: Assuming you have all the docker files https://github.com/RXNT/site-mkt
 #### You can get the acr name from terraform outputs
+```
 az acr login --name <acr-name>
 docker build -t <acr-name>.azurecr.io/site-mkt-marketing-api:v1 -f Dockerfile.api .
 docker build -t <acr-name>.azurecr.io/site-mkt-marketing-site:v1 -f Dockerfile.site .
 
 docker push <acr-name>.azurecr.io/site-mkt-marketing-api:v1
 docker push <acr-name>.azurecr.io/site-mkt-marketing-site:v1
-
+```
 ### 4. Phase 2 – Deploy Application
 
 #### Update Variables for Application Deployment before Phase 2
