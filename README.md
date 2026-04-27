@@ -24,7 +24,7 @@ $env:ARM_CLIENT_SECRET=""
 $env:ARM_TENANT_ID=""
 $env:ARM_SUBSCRIPTION_ID=""
 
-## Deployment Instructions
+## 🚀 Deployment
 1. Clone repo
 git clone https://github.com/janagamv/site-mkt-azure-terraform-deployment-demo.git  or git@github.com:janagamv/site-mkt-azure-terraform-deployment-demo.git
 
