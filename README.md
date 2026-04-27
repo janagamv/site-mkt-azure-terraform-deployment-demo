@@ -1,6 +1,7 @@
 # site-mkt-azure-terraform-deployment-demo
 
 Site Marketing App — Azure Deployment (Terraform + Container Apps)
+
 🔗 Live Application
 Frontend URL: https://<your-site-url>
 API: Internal-only (not publicly exposed)
