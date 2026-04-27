@@ -27,7 +27,7 @@ $env:ARM_SUBSCRIPTION_ID=""
 ---
 ## Deployment Instructions
 ### 1. Clone repo
-git clone https://github.com/janagamv/site-mkt-azure-terraform-deployment-demo.git  or git@github.com:janagamv/site-mkt-azure-terraform-deployment-demo.git
+git clone "https://github.com/janagamv/site-mkt-azure-terraform-deployment-demo.git"  or "git@github.com:janagamv/site-mkt-azure-terraform-deployment-demo.git"
 
 ### 2. Phase 1 – Deploy Infrastructure
 
