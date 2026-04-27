@@ -1,10 +1,34 @@
-#This can be case sensitive and should be part of key vault in future
-sql_admin_password = "Enter your sql admin password"
+# -----------------------------------------
+# Terraform Variables Example File
+# -----------------------------------------
+# Copy this file to `terraform.tfvars`
+# and update values before deployment
+# -----------------------------------------
 
-# Phase 1: keep false
-# Phase 2: change to true after images are pushed to ACR
-deploy_application = true
+# SQL Admin Password
+# NOTE:
+# - Use a strong password (min 12 chars, mix of uppercase, lowercase, numbers, special chars)
+# - Do NOT commit real passwords to Git
+# - Recommended: use environment variable instead:
+#   $env:TF_VAR_sql_admin_password="your-password"
 
-#Image urls
-api_image  = "acrsitemktdevcac.azurecr.io/site-mkt-marketing-api:v1"
-site_image = "acrsitemktdevcac.azurecr.io/site-mkt-marketing-site:v1"
+sql_admin_password = "REPLACE_WITH_STRONG_PASSWORD"
+
+# -----------------------------------------
+# Deployment Control
+# -----------------------------------------
+
+# Phase 1: Set to false → deploy infrastructure only
+# Phase 2: Set to true  → deploy application (after pushing images)
+
+deploy_application = false
+
+# -----------------------------------------
+# Docker Image Configuration
+# -----------------------------------------
+
+# Replace <acr-name> with your ACR name
+# Example: acrsitemktdevcac.azurecr.io
+
+api_image  = "<acr-name>.azurecr.io/site-mkt-marketing-api:v1"
+site_image = "<acr-name>.azurecr.io/site-mkt-marketing-site:v1"
