@@ -101,10 +101,10 @@ terraform output site_url
 ##  Design Overview
 
 - **Two-phase deployment**  
-  Avoids failures when Container Apps reference images that are not yet available in ACR.
+  Prevents application deployment failures when container images are not yet available in ACR.
 
 - **Landing zone + application separation**  
-  Improves modularity, reusability, and clean separation of concerns.
+  Separates foundational infrastructure from application workloads, improving modularity and reusability.
 
 - **Internal backend API**  
   Backend service is not exposed publicly, enhancing security.
