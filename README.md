@@ -24,6 +24,7 @@ $env:ARM_CLIENT_SECRET=""
 $env:ARM_TENANT_ID=""
 $env:ARM_SUBSCRIPTION_ID=""
 
+---
 ## Deployment Instructions
 ### 1. Clone repo
 git clone https://github.com/janagamv/site-mkt-azure-terraform-deployment-demo.git  or git@github.com:janagamv/site-mkt-azure-terraform-deployment-demo.git
@@ -71,11 +72,17 @@ terraform apply phase2tfplan
 #### Access Application
 terraform output site_url
 
+---
+
+---
 ## Scaling
 Min replicas: 1 (for demo reliability)
 Max replicas: 2
 HTTP scaling enabled automatically via ingress
 
+---
+
+---
 ## Design Overview
 Two-phase deployment
 Avoids failures when Container Apps reference images not yet in ACR.
@@ -87,6 +94,8 @@ Versioned container images
 Ensures reproducibility and avoids latest issues.
 Autoscaling configuration
 Supports traffic-based scaling with cost optimization.
+
+---
 ## Secrets Handling
 No secrets committed to repository
 SQL password passed via environment variable:
