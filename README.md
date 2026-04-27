@@ -18,11 +18,12 @@ The solution follows a two-phase deployment approach to ensure reliable provisio
 ##  Authentication
 Set Service Principal credentials once you have provisioned your service principal:
 
-powershell
+```powershell
 $env:ARM_CLIENT_ID=""
 $env:ARM_CLIENT_SECRET=""
 $env:ARM_TENANT_ID=""
 $env:ARM_SUBSCRIPTION_ID=""
+```
 
 ---
 ## Deployment Instructions
