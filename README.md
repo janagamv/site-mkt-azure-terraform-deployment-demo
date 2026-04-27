@@ -65,20 +65,23 @@ docker push <acr-name>.azurecr.io/site-mkt-marketing-site:v1
 #### Update Variables for Application Deployment before Phase 2
 
 After pushing Docker images, update `terraform.tfvars`:
+```
 deploy_application = true
 
 api_image = "<acr-name>.azurecr.io/site-mkt-marketing-api:v1"
 site_image = "<acr-name>.azurecr.io/site-mkt-marketing-site:v1"
 
+```
 #### Run Terraform to deploy application
+```
 terraform plan -out=phase2tfplan
 terraform apply phase2tfplan
+```
 #### Access Application
+```
 terraform output site_url
+```
 
----
-
----
 ## Scaling
 Min replicas: 1 (for demo reliability)
 Max replicas: 2
