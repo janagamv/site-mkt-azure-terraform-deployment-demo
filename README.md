@@ -22,7 +22,7 @@ Set Service Principal credentials once you have provisioned your service princip
 $env:ARM_CLIENT_ID=""
 $env:ARM_CLIENT_SECRET=""
 $env:ARM_TENANT_ID=""
-$env:ARM_SUBSCRIPTION_ID=""
+$env:ARM_SUBSCRIPTION_ID="" '''
 
 ## 🚀 Deployment
 1. Clone repo
