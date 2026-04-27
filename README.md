@@ -92,21 +92,22 @@ HTTP scaling enabled automatically via ingress
 ---
 
 ---
-## Design Overview
-Two-phase deployment
-Avoids failures when Container Apps reference images not yet in ACR.
-Landing zone + application separation
-Improves modularity and reusability.
-Internal backend API
-Backend is not publicly exposed for better security.
-Versioned container images
-Ensures reproducibility and avoids latest issues.
-Autoscaling configuration
-Supports traffic-based scaling with cost optimization.
+##  Design Overview
+
+- **Two-phase deployment**  
+  Avoids failures when Container Apps reference images that are not yet available in ACR.
+
+- **Landing zone + application separation**  
+  Improves modularity, reusability, and clean separation of concerns.
+
+- **Internal backend API**  
+  Backend service is not exposed publicly, enhancing security.
+
+- **Versioned container images**  
+  Uses explicit tags instead of `latest` to ensure reproducibility and consistent deployments.
+
+- **Autoscaling configuration**  
+  Enables traffic-based scaling while optimizing cost and resource usage.
 
 ---
-## Secrets Handling
-No secrets committed to repository
-SQL password passed via environment variable:
-$env:TF_VAR_sql_admin_password="..."
 
