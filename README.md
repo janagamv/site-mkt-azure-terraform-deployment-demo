@@ -37,11 +37,12 @@ git clone "https://github.com/janagamv/site-mkt-azure-terraform-deployment-demo.
 
 Copy the example variables file:
  copy terraform.tfvars.example terraform.tfvars
+```
 Add and Update required values:
  sql_admin_password = "<your-password>"
  deploy_application = false
- 
 > Note: Keep `deploy_application = false` for Phase 1 (infrastructure only)
+```
 
 #### Run Terraform to deploy the changes
 ```
