@@ -43,7 +43,7 @@ Add and Update required values:
  
 > Note: Keep `deploy_application = false` for Phase 1 (infrastructure only)
 
-#### Run Terraform to deploy the3 changes
+#### Run Terraform to deploy the changes
 ```
 terraform init
 terraform plan -out=phase1tfplan
