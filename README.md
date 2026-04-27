@@ -84,7 +84,7 @@ terraform apply phase2tfplan
 terraform output site_url
 ```
 
-## ⚡ Scaling
+##   Scaling
 
 - **Min replicas: 0**  
   Enables scale-to-zero for cost optimization when there is no traffic.
@@ -97,8 +97,7 @@ terraform output site_url
 
 - **Demo consideration**  
   For demonstration purposes, `min_replicas` can be temporarily set to `1` to ensure the application is always accessible without cold-start delay.
-```
----
+
 
 ---
 ##  Design Overview
