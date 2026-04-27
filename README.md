@@ -14,7 +14,7 @@ The solution follows a two-phase deployment approach to ensure reliable provisio
 ---
 
 ##  Authentication
-Set Service Principal credentials once you have provisioned your service principal:
+After creating the Service Principal, set the required credentials as environment variables:
 
 ```powershell
 $env:ARM_CLIENT_ID=""
@@ -104,7 +104,7 @@ terraform output site_url
   Prevents application deployment failures when container images are not yet available in ACR.
 
 - **Landing zone + application separation**  
-  Separates foundational infrastructure from application workloads, improving modularity and reusability.
+  Establishes a clear separation between platform infrastructure and application deployment, enhancing scalability, reusability, and maintainability.
 
 - **Internal backend API**  
   Backend service is not exposed publicly, enhancing security.
