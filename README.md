@@ -7,7 +7,7 @@ The solution follows a two-phase deployment approach to ensure reliable provisio
 
 ---
 
-## ⚙️ Prerequisites
+##  Prerequisites
 - Azure account
 - Azure CLI
 - Terraform >= 1.6
@@ -15,7 +15,7 @@ The solution follows a two-phase deployment approach to ensure reliable provisio
 
 ---
 
-## 🔐 Authentication
+##  Authentication
 Set Service Principal credentials once you have provisioned your service principal:
 
 powershell
